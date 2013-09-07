@@ -2,8 +2,10 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
-GET     /status                           controllers.Application.status
+# APIs
+GET         /status                 controllers.Application.status
+GET         /updatePosition         controllers.Application.updatePosition(dx: Option[String], dy: Option[String])
+GET         /click                  controllers.Application.click
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET        /assets/*file          controllers.Assets.at(path="/public", file)
